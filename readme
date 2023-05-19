@@ -1,0 +1,51 @@
+# Using Pixbay for images :
+
+https://pixabay.com/
+
+search images and do copy image address .
+
+--json server ---
+
+0. Create /back/db.json
+
+example:-
+{
+"product":[
+{
+"id":123,
+"name":"Apple",
+}
+]
+}
+
+1. To install json server
+
+   $ cd back
+   $ npm init
+   $ sudo npm install -g json-server
+
+2. To run
+   $ sudo json-server --watch db.json --port 5000 --host 0.0.0.0
+
+3. creating a proxy in package.json file ,with 5000 port
+
+   "proxy": "http://localhost:5000"
+
+--using react tostyfiy---
+
+1. install
+   $ npm i react-toastify
+
+---using react to print ---
+
+1. install
+   $ npm i react-to-print
+
+----copy the following into /components/ComponentToPrint.jsx---
+
+export const ComponentToPrint = React.forwardRef((props, ref) => {
+return (
+
+   <div ref={ref}>My cool content here!</div>
+   );
+   });
